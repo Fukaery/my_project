@@ -18,7 +18,6 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -41,9 +40,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-
-
    body {
     box-sizing: border-box;
     display: flex;
@@ -55,22 +51,22 @@ table {
     font-size: 16px;
     line-height: 1.3;
     color: black;
-
-
   }
-
  /*header styles*/
-
   .header{
     position: fixed;
     height: 147px;
     left: 0px;
-    right: 0px;
     top: 0px;
+    width: 100%;
     background: rgba(222, 222, 222, 0.5);
-    backdrop-filter: blur(10px);
+    z-index: 100;
   }
-
+  @supports (backdrop-filter: blur(10px)){
+    .header{ 
+    backdrop-filter: blur(10px);
+    background: rgba(222, 222, 222, 0.5);}
+  }
 
   .header_container{
     box-sizing: border-box;
@@ -82,7 +78,6 @@ table {
     padding-left: 40px;
     padding-right: 40px;
   }
-
   .header_logo{
     flex-shrink: 0;
     width: 202px;
@@ -90,18 +85,15 @@ table {
     text-decoration: none;
     font-size: 0;
   }
-
   .header_logo-icon{
     width: 100%;
     height: 100%;
   }
-
   .header_nav{
     margin: 0 auto;
     display: flex;
     align-items: baseline;
   }
-
   .header_nav-link{
     margin: 0 25px;
     text-decoration: none;
@@ -111,23 +103,18 @@ table {
     color: black;
     transition: color 0.2s;
   }
-
    .header_nav-link:hover{
     color: rgba(188, 51, 36, 1);
    }
-
    .header_nav-link:active{
     color: rgba(188, 51, 36, 1);
    }
-
    .maim{
     flex: 0 0 auto;
    }
-
    .footer{
     flex: 0 0 auto;
    }
-
    .btn{
     box-sizing: border-box;
     display: flex;
@@ -143,12 +130,10 @@ table {
     text-decoration: none;
     transition: color 0.2s, background-color 0.2s;
    }
-
    .header_btn:hover, .header_btn:active {
     color:white;
     background-color: black;
    }
-
    .header_right-block{
     display: flex;
     justify-content: center;
@@ -168,7 +153,7 @@ table {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -30px;
-    
+
    }
 
    .events-card{
@@ -205,7 +190,7 @@ table {
     left: 0;
     width: 100%;
     height: 100%;
-        
+
    }
 
    .events-card_title{
@@ -234,6 +219,34 @@ table {
     flex-grow: 0;
    }
 
+   .reserve{
+    display: grid;
+    width: 100%;
+    gap: 67px 150px;
+    grid-template-columns: 405px calc(89% - 405px);
+    grid-template-areas: 
+    "checkbox scheme"
+    "order legend";
+   }
+
+   .reserve_checkbox{
+    grid-area: checbox;
+    background-color: brown;
+   }
+
+   .reserve_scheme{
+    grid-area: scheme;
+    background-color: blueviolet;
+   }
+
+   .reserve_order{
+    grid-area: order;
+    background-color: chartreuse;
+   }
+   .reserve_legend{
+    grid-area: legend;
+    background-color: darkcyan;
+   }
 
 
 
@@ -243,10 +256,4 @@ table {
 
 
 
-
-  .intro{
-    height: 100vh;
-    background: url(/img/noise.png), url(/img/header__logo.png) ;
-    background-size: cover;
-    padding-top: 247px;
-}
+ 
