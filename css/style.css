@@ -155,6 +155,89 @@ table {
     width: 202px;
    }
 
+   .events{
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1414px;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+   }
+
+   .listing_events-card{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -30px;
+    
+   }
+
+   .events-card{
+    display: flex;
+    margin: 0 30px 120px;
+    width: 100%;
+    max-width: 405px;
+    min-width: 280px;
+    width: calc(33.333% - 60px);
+   }
+
+   .events-card_link{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-decoration: none;
+   }
+
+   .events-card_pic{
+    display: block;
+    position: relative;
+   }
+
+   .events-card_pic::before{
+    content: '';
+    display: block;
+    padding-top: 107.16%;
+    width: 100%;
+   }
+
+   .events-card_img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+        
+   }
+
+   .events-card_title{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: black;
+   }
+
+   .events-card_txt{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: black;
+   }
+
+   .events-card_time{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    color: black;
+    flex: none;
+    order: 5;
+    flex-grow: 0;
+   }
+
+
+
+
+
 
 
 
